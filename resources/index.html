@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MazeForge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="panel">
+      <h1>MazeForge</h1>
+      <p>Laser-cut square, circular, and marble maze generator</p>
+
+      <label>Maze style</label>
+      <select id="mazeType">
+        <option value="square">Square line maze</option>
+        <option value="marble">Square marble maze</option>
+        <option value="circular">Circular labyrinth</option>
+        <option value="circularMarble">Circular marble maze</option>
+      </select>
+
+      <label>Columns / rings</label>
+      <input id="cols" type="number" min="5" max="80" value="20">
+
+      <label>Rows</label>
+      <input id="rows" type="number" min="5" max="80" value="20">
+
+      <label>Width mm</label>
+      <input id="widthMm" type="number" min="50" max="1000" value="300">
+
+      <label>Height mm</label>
+      <input id="heightMm" type="number" min="50" max="1000" value="300">
+
+      <label>Cut stroke mm</label>
+      <input id="strokeMm" type="number" min="0.01" max="2" step="0.01" value="0.2">
+
+      <label>Marble diameter mm</label>
+      <input id="marbleMm" type="number" min="2" max="30" step="0.5" value="6">
+
+      <label>Clearance mm</label>
+      <input id="clearanceMm" type="number" min="0" max="5" step="0.1" value="0.8">
+
+      <div class="buttons">
+        <button id="generateBtn">Generate</button>
+        <button id="saveBtn">Save SVG</button>
+      </div>
+
+      <p class="tip">
+        Marble mode creates channel walls for a ball bearing or bead.
+        Try 6mm marble with 0.8mm clearance for a first test.
+      </p>
+    </aside>
+
+    <main class="preview">
+      <div id="mazeBox"></div>
+    </main>
+  </div>
+
+  <script src="/js/neutralino.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

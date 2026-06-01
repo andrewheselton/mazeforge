@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef3ed;
+  color: #142414;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  min-height: 100vh;
+}
+
+.panel {
+  background: #16351f;
+  color: white;
+  padding: 24px;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  margin: 0;
+  font-size: 34px;
+}
+
+p {
+  color: #cde8cd;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #7ed957;
+  color: #102410;
+}
+
+button:hover {
+  background: #9afa75;
+}
+
+.tip {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.preview {
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#mazeBox {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+  max-width: 95%;
+  max-height: 95vh;
+  overflow: auto;
+}
+
+svg {
+  max-width: 80vh;
+  max-height: 80vh;
+}
